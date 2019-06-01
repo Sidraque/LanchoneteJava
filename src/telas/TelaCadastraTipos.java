@@ -55,6 +55,11 @@ public class TelaCadastraTipos extends javax.swing.JFrame {
         jLabel1.setText("Descrição:");
 
         jtfDescricao.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jtfDescricao.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfDescricaoKeyTyped(evt);
+            }
+        });
 
         jBCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lanchonete/imagens/icons8-reproduzir-filled-36.png"))); // NOI18N
         jBCadastrar.setText("CADASTRA");
@@ -217,6 +222,14 @@ public class TelaCadastraTipos extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jbExcluirActionPerformed
+
+    private void jtfDescricaoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDescricaoKeyTyped
+        // TODO add your handling code here:
+        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfDescricaoKeyTyped
 
     /**
      * @param args the command line arguments

@@ -152,7 +152,7 @@
                       <Component id="jLabel7" min="-2" pref="53" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jtfValorVendidoData" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace pref="231" max="32767" attributes="0"/>
+                      <EmptySpace pref="235" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -230,6 +230,9 @@
                   <Font name="Tahoma" size="24" style="3"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfEntradaDataKeyTyped"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

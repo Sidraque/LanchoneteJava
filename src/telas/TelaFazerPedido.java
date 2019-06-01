@@ -208,9 +208,19 @@ public class TelaFazerPedido extends javax.swing.JFrame {
                 jtfNomeActionPerformed(evt);
             }
         });
+        jtfNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNomeKeyTyped(evt);
+            }
+        });
 
         jtfCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###########"))));
         jtfCPF.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtfCPF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfCPFKeyTyped(evt);
+            }
+        });
 
         jNomeCliente1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jNomeCliente1.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,6 +256,11 @@ public class TelaFazerPedido extends javax.swing.JFrame {
         jtfObservacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfObservacaoActionPerformed(evt);
+            }
+        });
+        jtfObservacao.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfObservacaoKeyTyped(evt);
             }
         });
 
@@ -658,12 +673,13 @@ public class TelaFazerPedido extends javax.swing.JFrame {
             }
 
             JOptionPane.showMessageDialog(this, "PEDIDO REALIZADO!", "MENSAGEM", JOptionPane.INFORMATION_MESSAGE);
+            limparCampos();
 
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
 
-        limparCampos();
+        
 
     }//GEN-LAST:event_jbFinalizarPedidoActionPerformed
 
@@ -671,6 +687,30 @@ public class TelaFazerPedido extends javax.swing.JFrame {
         // Atualiza o cardápio e preços na tela de pedidos:
         CarregarProdutos();
     }//GEN-LAST:event_jbAtualizarCardapioActionPerformed
+
+    private void jtfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomeKeyTyped
+        // TODO add your handling code here:
+        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfNomeKeyTyped
+
+    private void jtfCPFKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCPFKeyTyped
+        // TODO add your handling code here:
+        String caracteres = "0987654321.";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfCPFKeyTyped
+
+    private void jtfObservacaoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfObservacaoKeyTyped
+        // TODO add your handling code here:
+        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfObservacaoKeyTyped
 
     /**
      * Converte data tipo date para o formato americano yyyy/MM/dd também tipo

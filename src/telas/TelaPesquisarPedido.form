@@ -232,6 +232,9 @@
               <Font name="Tahoma" size="24" style="3"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfNomeKeyTyped"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

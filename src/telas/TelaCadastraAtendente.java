@@ -6,6 +6,7 @@ import atendente.RegrasAtendente;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class TelaCadastraAtendente extends javax.swing.JFrame {
@@ -76,6 +77,11 @@ public class TelaCadastraAtendente extends javax.swing.JFrame {
         jLabel1.setText("Nome do Atendente:");
 
         jtfNome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtfNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNomeKeyTyped(evt);
+            }
+        });
 
         jBCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lanchonete/imagens/icons8-reproduzir-filled-36.png"))); // NOI18N
         jBCadastrar.setText("CADASTRAR");
@@ -170,7 +176,7 @@ public class TelaCadastraAtendente extends javax.swing.JFrame {
             regrasAtendente.cadastrarAtendente(atendente);
 
         } catch (Exception ex) {
-            Logger.getLogger(TelaCadastraAtendente.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
         }
         carregarAtendentes();
         limparCampos();
@@ -204,6 +210,14 @@ public class TelaCadastraAtendente extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jbExcluirActionPerformed
+
+    private void jtfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomeKeyTyped
+        // TODO add your handling code here:
+        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfNomeKeyTyped
 
     /**
      * @param args the command line arguments

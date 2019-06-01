@@ -106,6 +106,11 @@ public class TelaPesquisarPedido extends javax.swing.JFrame {
 
         jtfNome.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
         jtfNome.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jtfNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNomeKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -181,6 +186,14 @@ public class TelaPesquisarPedido extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jbPesquisarActionPerformed
+
+    private void jtfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomeKeyTyped
+        // TODO add your handling code here:
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfNomeKeyTyped
 
     /**
      * @param args the command line arguments

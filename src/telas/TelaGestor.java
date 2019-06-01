@@ -114,6 +114,11 @@ public class TelaGestor extends javax.swing.JFrame {
 
         jtfEntradaData.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtfEntradaData.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jtfEntradaData.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfEntradaDataKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -146,7 +151,7 @@ public class TelaGestor extends javax.swing.JFrame {
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtfValorVendidoData, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(235, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(10, 10, 10)
@@ -232,6 +237,14 @@ public class TelaGestor extends javax.swing.JFrame {
         // Limpa todos os campos da tela:
         limparCampos();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jtfEntradaDataKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfEntradaDataKeyTyped
+        // TODO add your handling code here:
+        String caracteres = "0987654321/";
+        if (!caracteres.contains(evt.getKeyChar() + "")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfEntradaDataKeyTyped
 
     /**
      * @param args the command line arguments
