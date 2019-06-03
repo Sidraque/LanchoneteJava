@@ -252,7 +252,7 @@ public class TelaPesquisarPedido extends javax.swing.JFrame {
             }
             jtPedidos.setModel(modelo);
         } catch (Exception e) {
-            //JOptionPane.showMessageDialog(this, e.getMessage());
+            JOptionPane.showMessageDialog(this, e.getMessage());
         }
 
     }

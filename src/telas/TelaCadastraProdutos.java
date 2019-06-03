@@ -6,6 +6,8 @@
 package telas;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 import produto.DadosProduto;
@@ -414,9 +416,9 @@ public class TelaCadastraProdutos extends javax.swing.JFrame {
             produto.setNome(jtfProduto.getText());
 
             if (jrbDisponivel.isSelected()) {
-                produto.setDisponibilidade("Sim");
+                produto.setDisponibilidade("Disponível");
             } else {
-                produto.setDisponibilidade("Faltando");
+                produto.setDisponibilidade("Indisponível");
             }
 
             produto.setValorUnitario(Double.valueOf(jtfPreco.getText()));
@@ -450,9 +452,9 @@ public class TelaCadastraProdutos extends javax.swing.JFrame {
             produto.setNome(jtfProduto.getText());
 
             if (jrbDisponivel.isSelected()) {
-                produto.setDisponibilidade("Sim");
+                produto.setDisponibilidade("Disponível");
             } else {
-                produto.setDisponibilidade("Faltando");
+                produto.setDisponibilidade("Indisponível");
             }
 
             produto.setValorUnitario(Double.valueOf(jtfPreco.getText()));
@@ -465,7 +467,9 @@ public class TelaCadastraProdutos extends javax.swing.JFrame {
             tipo.setDescricao(descricao);
 
             produto.setTipo(tipo);
-
+            
+       
+            
             regrasProduto.cadastrarProduto(produto);
 
             carregarTipos();
@@ -473,7 +477,7 @@ public class TelaCadastraProdutos extends javax.swing.JFrame {
             limparCampos();
 
         } catch (Exception ex) {
-            //Logger.getLogger(TelaCadastraProdutos1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaCadastraProdutos.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_jbCadastrarActionPerformed
