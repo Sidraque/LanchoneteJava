@@ -7,7 +7,7 @@ package cliente;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class RegrasCliente {
 

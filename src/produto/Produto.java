@@ -9,7 +9,7 @@ import tipo.Tipo;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class Produto {
     

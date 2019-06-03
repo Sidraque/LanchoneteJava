@@ -7,7 +7,7 @@ package tipo;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class RegrasTipo {
 

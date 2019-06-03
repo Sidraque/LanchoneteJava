@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class RegrasPedido {
 

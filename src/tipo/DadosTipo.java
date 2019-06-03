@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class DadosTipo extends conexao.ConexaoBanco {
 

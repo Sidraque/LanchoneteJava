@@ -7,7 +7,7 @@ package atendente;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class Atendente {
     

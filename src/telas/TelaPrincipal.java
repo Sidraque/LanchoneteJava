@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class TelaPrincipal extends javax.swing.JFrame {
 

@@ -7,7 +7,7 @@ package produto;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class RegrasProduto {
     

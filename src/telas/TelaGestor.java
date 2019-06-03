@@ -17,7 +17,7 @@ import pedido.RegrasPedido;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class TelaGestor extends javax.swing.JFrame {
 

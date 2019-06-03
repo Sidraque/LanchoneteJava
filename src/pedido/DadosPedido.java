@@ -13,11 +13,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import produto.Produto;
-import tipo.Tipo;
-
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class DadosPedido extends conexao.ConexaoBanco {
 

@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class ConexaoBanco {
 

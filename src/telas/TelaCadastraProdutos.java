@@ -18,7 +18,7 @@ import tipo.Tipo;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class TelaCadastraProdutos extends javax.swing.JFrame {
 
@@ -536,7 +536,7 @@ public class TelaCadastraProdutos extends javax.swing.JFrame {
 
     private void jtfProdutoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfProdutoKeyTyped
         // TODO add your handling code here:
-        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚçÇÃÕãõ ";
         if (!caracteres.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }

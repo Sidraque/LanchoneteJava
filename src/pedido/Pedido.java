@@ -12,7 +12,7 @@ import produto.Produto;
 
 /**
  *
- * @author lgdal
+ * @author dlpsv
  */
 public class Pedido {
     

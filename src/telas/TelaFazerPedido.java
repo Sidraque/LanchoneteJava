@@ -10,8 +10,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 import java.util.Date;
@@ -690,7 +688,7 @@ public class TelaFazerPedido extends javax.swing.JFrame {
 
     private void jtfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomeKeyTyped
         // TODO add your handling code here:
-        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚÇç~ ";
         if (!caracteres.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }
@@ -706,7 +704,7 @@ public class TelaFazerPedido extends javax.swing.JFrame {
 
     private void jtfObservacaoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfObservacaoKeyTyped
         // TODO add your handling code here:
-        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáéíóúÁÉÍÓÚÇç~ ";
         if (!caracteres.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }
